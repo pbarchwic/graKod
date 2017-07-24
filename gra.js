@@ -25,7 +25,8 @@ function namep2()
     // sprawdzenie czy imie jest wpisane
 if (p2 != '')
 	{
-        document.getElementById('hellop2').innerHTML = "witaj "+ p2 ;
+    
+	document.getElementById('hellop2').innerHTML = "witaj "+ p2 ;
 	}
     else
     {
@@ -42,7 +43,7 @@ if (p2 != '')
 	document.getElementById('graj').addEventListener('click', gra);
 	
 function gra() {
-    zgadnij = document.getElementById('textbox').value;
+		zgadnij = document.getElementById('textbox').value;
     if (zgadnij == los) {
         document.getElementById('wynik').innerHTML = "GRATULACJE";
     } else if (zgadnij < los) {
