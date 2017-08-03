@@ -36,7 +36,7 @@ if (p2 != '')
     return false;
 }
 
-	var los = Math.floor((Math.random() * 9000) + 1000);
+	var los ;
 	var ruchy = 0;
 	var zgadnij;
 
@@ -46,14 +46,15 @@ function gra() {
 		zgadnij = document.getElementById('textbox').value;
     if (zgadnij == los) {
         document.getElementById('wynik').innerHTML = "GRATULACJE";
-    } else if (zgadnij < los) {
+    } if (zgadnij < los) {
         document.getElementById('wynik').innerHTML = "za nisko";
         ruchy++;
-    } else if (zgadnij > los) {
+    } if (zgadnij > los) {
         document.getElementById('wynik').innerHTML = "za wysoko";
         ruchy++;
-    } else {
-        alert('You didn\'t enter a number. Try again.');
+    } else if (zgadnij==="")
+	{
+        document.getElementById('wynik').innerHTML = "podaj Kod";
     }
 }
 
@@ -67,3 +68,26 @@ document.getElementById('losuj').addEventListener('click', losowanie);
 	document.getElementById('wylosowane').innerHTML = los;
 }	
 
+
+noStroke();
+
+// position of the car
+var x = 10;
+    
+draw = function() {
+    
+    // all lines of code inside here will be run repeatedly
+    background(151, 244, 247);
+    
+    // draw the car body
+    fill(255, 0, 115);
+    rect(x, 200, 100, 20);
+    rect(x + 15, 178, 70, 40);
+    
+    // draw the wheels
+    fill(77, 66, 66);
+    ellipse(x + 25, 221, 24, 24);
+    ellipse(x + 75, 221, 24, 24);
+    
+    x = x + 1;
+};
