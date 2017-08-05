@@ -13,30 +13,30 @@
 <body>
 
 	<div id="pojemnik">
-		<div id="plansza">
+		<div id="gracze">
 
-
-			<form id="player1" action=""><div>
-			Witaj agencie, czy zdradzisz mi swój pseudonim?: <input type="text" name="p1">
-			<button onclick="return namep1()">OK</button>
-			</div></form>
-			
-			<form id="player2" action=""><div>
-			A jak zwą Twojego partnera? <input type="text" name="p2">
-			<button onclick="return namep2()">OK</button>
-			</div></form>
-		
-			
-		
+			Witaj agencie, czy zdradzisz mi swój pseudonim, oraz Twojego partnera?<br/>
+			<form id="player1" action="">
+			<input type="text" name="p1" maxlength='20' placeholder="Agent 1"> 
+			</form>
+			<span style="float:left; padding:10px">i</span>
+			<form id="player2" action="">
+			<input type="text" name="p2" maxlength='20' placeholder="Agent 2">
+			</form>
+			<p/>
+			<button onclick="return playersName()" id="zatwierdz" >Gotowe</button>
 		</div>
-			<button onclick="losowanie()">Uaktywnij kod terrorysty!</button>
+	<div id="gra">
+			<div id="hello"> </div>
+			<button onclick="losowanie()" id="losuj">Uaktywnij kod terrorysty!</button>
 			<div id="wylosowane"> </div>
 			<div id="hellop1"> </div>
-			<input type="text" id="textbox" />
+			<input type="text" id="textbox" maxlength='4' placeholder="Wpisz kod"/><p/>
 			<button onclick="gra()">Zagraj</button>
 			<div id="wynik"> </div>
-			
-			<div id="hellop2"> </div>
+		
+			</div>
+			<div style="clear:both"></div>
 			
 	</div>
 	

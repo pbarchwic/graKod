@@ -11,27 +11,76 @@ body
 {
 	margin-top: 100px;
 	background-color: darkgrey;
-	width:900px;
+	width:800px;
 	margin-left:auto;
 	margin-right:auto;
-	padding: 20px;
-	border-radius: 50px;
+	border-radius: 10px;
+	height: 200px;
 }
 
-#plansza
+#gracze
 {
-	width: 900px;
-	margin-top: 10px;
-	margin-bottom: 50px;
+	width: 359px;
+	height: 150px;
 	text-align: left;
 	font-size: 20px;
-	min-height: 60px;
-	margin-left: 100px;
+	float: left;
+	padding: 0px 20px 0px 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border-right: 0.5px solid grey;
+
 }
-.button
+
+#gra
 {
-	color: green;
+	width: 358px;
+	height: 200px;
+	text-align: left;
+	font-size: 20px;
+	height: 100px;
+	float:left;
+	float: left;
+	padding: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-left: 0.5px solid grey;
+}
+input[type="text"]
+{
+	background-color: darkgrey;
+	border: 1px solid grey;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 150px;
+	color: white;
+	text-align:center;
+	font-size: 15px;
+}
+form#player1
+{
+	width: 150px;
+	float:left;
+	padding: 5px;
+	font-size: 15px;
 }
 
+form#player2
+{
+	width: 150px;
+	float:left;
+	padding: 5px;
+	font-size: 15px;
+}
+button#zatwierdz
+{
+	align: center;
+	background-color: white;
+	border: none;
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	margin-left: 80px;
 
-
+}
