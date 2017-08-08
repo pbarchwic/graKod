@@ -2,8 +2,8 @@
 	var los ;
 	var ruchy = 0;
 	var zgadnij;
-	var p1
-	var p2
+	var p1=''
+	var p2=''
 
 // Pobieranie imion graczy
 
@@ -23,6 +23,7 @@ if (p1 != '' && p2!='')
     else
     {
         alert('Podaj imiona dwóch agentów!');
+	
     }
     return true;
 }
@@ -34,29 +35,42 @@ function gra() {
 		zgadnij = document.getElementById('textbox').value;
     if (zgadnij == los) 
 	{
+		document.getElementById('wynik').style.color = "#5EDD44";
         document.getElementById('wynik').innerHTML = "Świetny strzał, świat uratowany" ;
     } 
 	if (zgadnij < los) 
 	{
+		document.getElementById('wynik').style.color = "#DD4444";
         document.getElementById('wynik').innerHTML = "Kod niepoprawny,za nisko!";
         ruchy++;
     }
 	if (zgadnij > los) 
 	{
+		document.getElementById('wynik').style.color = "#DD4444";
         document.getElementById('wynik').innerHTML = "Kod niepoprawny, za wysoko!";
         ruchy++;
     } 
 	else if (zgadnij ='' || zgadnij.length !=4)
 	{
-        document.getElementById('wynik').innerHTML = "Wpisz poprawny kod!";
+		document.getElementById('wynik').style.color = "#DD4444";
+		document.getElementById('wynik').innerHTML = "Wpisz poprawny kod!";
     }
 }
 
 //losowanie ukrytej liczby
 
  function losowanie() {
-    los = Math.floor((Math.random() * 9000) + 1000);
-	document.getElementById('wylosoane').innerHTML = los;
+	 
+	 if ( p1 !='' && p2!='')
+	 {
+		los = Math.floor((Math.random() * 9000) + 1000);
+		document.getElementById('wylosowane').innerHTML = los;
+	 }
+	 else
+	 {
+		alert('Podaj imiona dwóch agentów!');
+	 }
 }	
+
 
 

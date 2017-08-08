@@ -29,11 +29,11 @@
 		</div>
 	<div id="gra">
 			<div id="hello"> Wróg chce przejąc wladze nad światem. Tylko wy możecie go zatrzymacz. Czy dacie radę? </div>
-			<button onclick="losowanie()" id="losuj">Uaktywnij kod terrorysty!</button>
-			<div id="wylosowane"> </div>
-			<div id="hellop1"> </div><p/>
-			<input type="text" id="textbox" maxlength='4' placeholder="Wpisz kod"/><p/>
-			<button onclick="gra()">Zagraj</button>
+			<button onclick="losowanie(); this.onclick=null;" id="losuj">Uaktywnij kod terrorysty!</button>
+			<div id="wylosowane"> </div><p/>
+			<input type="text" id="textbox" maxlength='4' placeholder="Wpisz kod"/>
+			<button onclick="gra()" id="zagraj">Rozszyfruj</button>
+			<div style="clear:both"></div><p/>
 			<div id="wynik"> </div>
 		
 			</div>
