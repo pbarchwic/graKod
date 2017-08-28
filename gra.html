@@ -6,7 +6,7 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style.css" type="text/css" />
-	<script src="gra.js"></script>
+
 
 </head>
 
@@ -25,24 +25,24 @@
 			</form>
 			<div style="clear:both"></div>
 			<p/>
-			<button onclick="return playersName()" id="zatwierdz" >Gotowe</button>
+			<button id="zatwierdz" >Gotowe</button>
+			<button id="reset" >Nowa gra</button>
 		</div>
 	<div id="gra">
 			<div id="hello"> Wróg chce przejąc wladze nad światem. Tylko wy możecie go zatrzymacz. Czy dacie radę? </div>
-			<button onclick="losowanie(); this.onclick=null;" id="losuj">Uaktywnij kod terrorysty!</button>
+			<button  id="losuj">Uaktywnij kod terrorysty!</button>
 			<div id="wylosowane"> </div><p/>
 			<input type="text" id="textbox" maxlength='4' placeholder="Wpisz kod"/>
-			<button onclick="gra()" id="zagraj">Rozszyfruj</button>
+			<button id="zagraj">Rozszyfruj</button>
 			<div style="clear:both"></div><p/>
 			<div id="wynik"> </div>
 		
 			</div>
 			<div style="clear:both"></div>
-			
 	</div>
 	
 
-			
+	<script src="gra.js"></script>		
 	
 </body>
 </html>

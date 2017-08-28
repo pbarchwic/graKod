@@ -7,6 +7,7 @@
 
 // Pobieranie imion graczy
 
+zatwierdz.addEventListener("click", playersName);
 
 function playersName()
 {
@@ -23,14 +24,15 @@ if (p1 != '' && p2!='')
     else
     {
         alert('Podaj imiona dwóch agentów!');
-	
     }
     return true;
-}
-
 	
+}	
 	
 // Wypisywanie odpowiedniego komunikatu
+
+zagraj.addEventListener("click", gra);
+
 function gra() {
 		zgadnij = document.getElementById('textbox').value;
     if (zgadnij == los) 
@@ -59,18 +61,29 @@ function gra() {
 
 //losowanie ukrytej liczby
 
+losuj.addEventListener("click", losowanie);
+
  function losowanie() {
 	 
 	 if ( p1 !='' && p2!='')
 	 {
 		los = Math.floor((Math.random() * 9000) + 1000);
 		document.getElementById('wylosowane').innerHTML = los;
+		losuj.removeEventListener('click', losowanie);
 	 }
 	 else
 	 {
 		alert('Podaj imiona dwóch agentów!');
 	 }
+
 }	
+// nowa gra
 
-
+	reset.addEventListener("click", resetuj);
+	
+	function resetuj ()
+	{
+		location.reload()
+	}
+	
 
