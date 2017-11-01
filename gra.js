@@ -1,10 +1,9 @@
 // Zmienne globalne
 	var los ;
-	var ruchy = 0;
 	var zgadnij;
-	var p1=''
-	var p2=''
-
+	var p1='';
+	var p2='';
+	
 // Pobieranie imion graczy
 
 zatwierdz.addEventListener("click", playersName);
@@ -34,7 +33,8 @@ if (p1 != '' && p2!='')
 zagraj.addEventListener("click", gra);
 
 function gra() {
-		zgadnij = document.getElementById('textbox').value;
+	var playerTurn 
+	zgadnij = document.getElementById('textbox').value;
     if (zgadnij == los) 
 	{
 		document.getElementById('wynik').style.color = "#5EDD44";
@@ -43,14 +43,12 @@ function gra() {
 	if (zgadnij < los) 
 	{
 		document.getElementById('wynik').style.color = "#DD4444";
-        document.getElementById('wynik').innerHTML = "Kod niepoprawny,za nisko!";
-        ruchy++;
+        document.getElementById('wynik').innerHTML = "Kod niepoprawny,za nisko!"
     }
 	if (zgadnij > los) 
 	{
 		document.getElementById('wynik').style.color = "#DD4444";
         document.getElementById('wynik').innerHTML = "Kod niepoprawny, za wysoko!";
-        ruchy++;
     } 
 	else if (zgadnij ='' || zgadnij.length !=4)
 	{
